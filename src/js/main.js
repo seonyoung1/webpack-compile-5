@@ -28,16 +28,15 @@ window.script = (() => {
 
 	const getList = async () => {
 		// const {data: list} =
-		const list = await axios.get('http://jsonplaceholder.typicode.com/posts').then(function(response){
+		const list = await axios.get('http://jsonplaceholder.typicode.com/posts').then(function (response) {
 			return response.data;
 		});
 
 		// console.log(list);
 
-		list.map(v => {
+		list.map((v) => {
 			return drawItem(v);
-		})
-
+		});
 	};
 
 	const drawItem = (data) => {
@@ -47,14 +46,15 @@ window.script = (() => {
 		// document.querySelector('.list').appendChild(item);
 		const item = `<div class="item">${data.title}</div>`;
 		document.querySelector('.list').insertAdjacentHTML('beforeend', item);
-	}
+	};
 
 	window.addEventListener('load', () => {
-
 		getList().then();
-
 	});
 
+	window.addEventListener('DOMContentLoaded', () => {
+		console.log('eslint 가 과연??');
+	});
 
 	return {
 		test: test,
