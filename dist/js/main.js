@@ -1,4 +1,4 @@
-/*! Build Date: 2021. 1. 5. 오후 2:52:43 */
+/*! Build Date: 2021. 1. 6. 오후 3:46:58 */
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -1922,6 +1922,9 @@ window.script = function () {
 
   window.addEventListener('load', function () {
     getList().then();
+  });
+  window.addEventListener('DOMContentLoaded', function () {
+    console.log('eslint 가 과연??');
   });
   return {
     test: test

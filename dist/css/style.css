@@ -1,4 +1,4 @@
-/*! Build Date: 2021. 1. 5. 오후 2:52:43 */
+/*! Build Date: 2021. 1. 6. 오후 3:46:58 */
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap);
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -31,7 +31,8 @@ html {
 }
 
 body {
-  font-family: "Noto Sans KR", "Apple SD Gothic Neo", Roboto, NanumGothic, "Malgun Gothic", sans-serif;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Roboto, NanumGothic, 'Malgun Gothic', sans-serif;
+  font-size: 16px;
   letter-spacing: -0.05em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -95,7 +96,7 @@ input, select, textarea {
   vertical-align: middle;
   box-sizing: border-box;
   border-radius: 0;
-  font-family: "Noto Sans KR", "Apple SD Gothic Neo", Roboto, NanumGothic, "Malgun Gothic", sans-serif;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Roboto, NanumGothic, 'Malgun Gothic', sans-serif;
 }
 
 input {
@@ -120,7 +121,7 @@ button {
   border: 0;
   background: transparent;
   cursor: pointer;
-  font-family: "Noto Sans KR", "Apple SD Gothic Neo", Roboto, NanumGothic, "Malgun Gothic", sans-serif;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Roboto, NanumGothic, 'Malgun Gothic', sans-serif;
 }
 
 a {
@@ -134,6 +135,10 @@ img {
 
 body {
   background-color: antiquewhite;
+}
+
+.list li {
+  padding-bottom: 10px;
 }
 
 
