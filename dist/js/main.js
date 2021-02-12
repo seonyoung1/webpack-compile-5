@@ -1,4 +1,4 @@
-/*! Build Date: 2021. 1. 6. 오후 3:46:58 */
+/*! Build Date: 2021. 2. 12. 오전 9:49:00 */
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -1889,6 +1889,8 @@ window.script = function () {
               _context.next = 2;
               return axios__WEBPACK_IMPORTED_MODULE_2___default().get('http://jsonplaceholder.typicode.com/posts').then(function (response) {
                 return response.data;
+              }).catch(function (error) {
+                return console.log(error);
               });
 
             case 2:
@@ -1920,8 +1922,44 @@ window.script = function () {
     document.querySelector('.list').insertAdjacentHTML('beforeend', item);
   };
 
+  function getUserList() {
+    return new Promise(function (resolve, reject) {
+      var userList = ['user1', 'user2', 'user3'];
+      resolve(userList);
+    });
+  }
+
+  function fetchData() {
+    return _fetchData.apply(this, arguments);
+  }
+
+  function _fetchData() {
+    _fetchData = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+      var list;
+      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return getUserList();
+
+            case 2:
+              list = _context2.sent;
+              console.log(list);
+
+            case 4:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+    return _fetchData.apply(this, arguments);
+  }
+
   window.addEventListener('load', function () {
     getList().then();
+    fetchData();
   });
   window.addEventListener('DOMContentLoaded', function () {
     console.log('eslint 가 과연??');

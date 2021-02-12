@@ -28,9 +28,12 @@ window.script = (() => {
 
 	const getList = async () => {
 		// const {data: list} =
-		const list = await axios.get('http://jsonplaceholder.typicode.com/posts').then(function (response) {
-			return response.data;
-		});
+		const list = await axios
+			.get('http://jsonplaceholder.typicode.com/posts')
+			.then((response) => {
+				return response.data;
+			})
+			.catch((error) => console.log(error));
 
 		// console.log(list);
 
@@ -48,12 +51,24 @@ window.script = (() => {
 		document.querySelector('.list').insertAdjacentHTML('beforeend', item);
 	};
 
+	function getUserList() {
+		return new Promise((resolve, reject) => {
+			var userList = ['user1', 'user2', 'user3'];
+			resolve(userList);
+		});
+	}
+	async function fetchData() {
+		var list = await getUserList();
+		console.log(list);
+	}
+
 	window.addEventListener('load', () => {
 		getList().then();
 	});
 
 	window.addEventListener('DOMContentLoaded', () => {
 		console.log('eslint 가 과연??');
+		fetchData();
 	});
 
 	return {
